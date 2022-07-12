@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net6.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/1c401aa9-ba9c-42ab-ae95-efe382fb6949/microsoft.web/sites/subscriptions/1c401aa9-ba9c-42ab-ae95-efe382fb6949/resourceGroups/duramas_group/providers/Microsoft.Web/sites/tutoria2022"
+}
