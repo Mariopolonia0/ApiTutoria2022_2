@@ -66,5 +66,7 @@ public class Contexto : DbContext
         modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 202, DocenteId = 1, AsignaturaId = 23 });
         modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 204, DocenteId = 514, AsignaturaId = 22 });
 
+
+
     }
 }
