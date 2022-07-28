@@ -28,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGet("/", () => "Hola la Api esta nitida");
+app.MapGet("/", () => "Hola la Api esta nitida. today is "+DateTime.Now.ToString("dddd"));
 
 app.Run();

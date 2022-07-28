@@ -17,12 +17,12 @@ namespace ApiTutoria2022_2.Controllers
 
         // POST: api/Login
         [HttpPost]
-        public async Task<ActionResult<LoginDto>> PostLogin(String Usuario, String Password)
+        public async Task<ActionResult<LoginDto>> PostLogin(LoginIn loginIn)
         {
-            var login = await _contexto.Logins!.FirstOrDefaultAsync(Login => Login.Usuario == Usuario);
+            var login = await _contexto.Logins!.FirstOrDefaultAsync(Login => Login.Usuario == loginIn.usuario);
 
             if (login != null)
-                if (login.Password == Password)
+                if (login.Password == loginIn.password)
                 {
                     var estudiante = _contexto.Estudiantes!.Find(login.EstudianteId);
                     var persona = _contexto.Personas!.Find(estudiante!.PersonaId);

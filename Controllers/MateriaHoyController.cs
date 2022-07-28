@@ -13,9 +13,10 @@ namespace ApiTutoria2022_2.Controllers
             _contexto = contexto;
         }
         // POST: api/Login
-        [HttpPost]
+        [HttpGet("{estudianteId}")]
         public List<MateriasDto> GetMateriasHoy(int estudianteId)
         {
+            string dia = DateTime.Now.ToString("dddd");
             return (from estudiante in _contexto.Estudiantes
                     join inscripciones in _contexto.Inscripciones!
                     on estudiante.EstudianteId equals inscripciones.EstudianteId
@@ -27,9 +28,10 @@ namespace ApiTutoria2022_2.Controllers
                     on asignatura.AsignaturaId equals secciones.AsignaturaId
                     join horario in _contexto.Horarios!
                     on secciones.SeccionId equals horario.SeccionId
-                    where (estudiante.EstudianteId == estudianteId)
+                    where (estudiante.EstudianteId == estudianteId && horario.Dia == dia)
                     select new MateriasDto(asignatura.Nombre, horario.Dia, horario.Aula, horario.HoraInicio, horario.HoraFin)
                  ).ToList();
         }
+        
     }
 }
