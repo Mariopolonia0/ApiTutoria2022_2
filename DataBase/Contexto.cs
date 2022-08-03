@@ -11,6 +11,8 @@ public class Contexto : DbContext
     public DbSet<Login>? Logins { set; get; }
     public DbSet<Persona>? Personas { set; get; }
     public DbSet<Seccion>? Secciones { set; get; }
+    public DbSet<MateriaObligatoria>? MateriasObligatorias { set; get; }
+    public DbSet<MateriaOptativa>? MateriasOptativas { set; get; }
 
     public Contexto(DbContextOptions<Contexto> options) : base(options)
     {
@@ -65,8 +67,5 @@ public class Contexto : DbContext
         modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 201, DocenteId = 512, AsignaturaId = 21 });
         modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 202, DocenteId = 1, AsignaturaId = 23 });
         modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 204, DocenteId = 514, AsignaturaId = 22 });
-
-
-
     }
 }
