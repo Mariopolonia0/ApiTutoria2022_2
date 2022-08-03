@@ -9,6 +9,7 @@ namespace ApiTutoria2022_2.Models
         public string Nombres { get; set; } = string.Empty;
         public string Apellidos { get; set; } = string.Empty;
         public string NumeroCedula { get; set; } = string.Empty;
+        public string Tutor { get; set; } = string.Empty;
         public int DireccionId { get; set; } = 0;
         public string Telefono { get; set; } = string.Empty;
         public string Celular { get; set; } = string.Empty;

@@ -12,7 +12,7 @@ namespace ApiTutoria2022_2.Controllers
         {
             _contexto = contexto;
         }
-        // POST: api/Login
+       
         [HttpGet("{estudianteId}")]
         public List<MateriasDto> GetMateriasHoy(int estudianteId)
         {
