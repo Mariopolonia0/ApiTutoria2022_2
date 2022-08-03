@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hk4SNUYpT97Cqudx3JWyNhJFkLBlLJLdMX4oR17WSRr92o1ZTfoOA/XMJm1+3uE+YWp+LlIMj8t3zjFGuwMEeQ==",
+  "dgSpecHash": "NJlmF6tqZ+xYFN18Q13jPY7hCdN6xN8O2DuTC8AN5i8UFwbfN5nkHGMXHoC11u/65U5UZRn7q4Npz/XMiUZ1Lw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mario\\source\\repos\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj",
   "expectedPackageFiles": [
@@ -42,5 +42,12 @@
     "C:\\Users\\Mario\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\Mario\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\Mario\\source\\repos\\ApiTutoria2022_2\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
