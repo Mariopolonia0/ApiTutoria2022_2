@@ -14,6 +14,7 @@ public class Contexto : DbContext
     public DbSet<Persona>? Personas { set; get; }
     public DbSet<Seccion>? Secciones { set; get; }
     public DbSet<Transaccion>? Transaccion { set; get; }
+    public DbSet<Cuatrimestre>? Cuatrimestre { set; get; }
 
 
     public Contexto(DbContextOptions<Contexto> options) : base(options)
