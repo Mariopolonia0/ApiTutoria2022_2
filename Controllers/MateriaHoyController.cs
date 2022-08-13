@@ -28,7 +28,7 @@ namespace ApiTutoria2022_2.Controllers
                     on asignatura.AsignaturaId equals secciones.AsignaturaId
                     join horario in _contexto.Horarios!
                     on secciones.SeccionId equals horario.SeccionId
-                    where (estudiante.EstudianteId == estudianteId && horario.Dia == dia)
+                    where (estudiante.EstudianteId == estudianteId)
                     select new MateriasDto(asignatura.Nombre, horario.Dia, horario.Aula, horario.HoraInicio, horario.HoraFin)
                  ).ToList();
         }
