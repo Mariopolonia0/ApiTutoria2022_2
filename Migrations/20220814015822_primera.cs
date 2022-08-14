@@ -81,7 +81,8 @@ namespace ApiTutoria2022_2.Migrations
                     CuatrimestreId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     yeard = table.Column<int>(type: "INTEGER", nullable: false),
-                    numeroCuatrimestre = table.Column<int>(type: "INTEGER", nullable: false)
+                    numeroCuatrimestre = table.Column<int>(type: "INTEGER", nullable: false),
+                    Meses = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -120,6 +121,22 @@ namespace ApiTutoria2022_2.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Horarios", x => x.HorariosId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Indices",
+                columns: table => new
+                {
+                    IndiceId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CuatrimestreId = table.Column<int>(type: "INTEGER", nullable: false),
+                    EstudianteId = table.Column<int>(type: "INTEGER", nullable: false),
+                    indicePeriodo = table.Column<string>(type: "TEXT", nullable: true),
+                    indiceAcumulado = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Indices", x => x.IndiceId);
                 });
 
             migrationBuilder.CreateTable(
@@ -1426,23 +1443,23 @@ namespace ApiTutoria2022_2.Migrations
 
             migrationBuilder.InsertData(
                 table: "Cuatrimestre",
-                columns: new[] { "CuatrimestreId", "numeroCuatrimestre", "yeard" },
-                values: new object[] { 100, 2, 2020 });
+                columns: new[] { "CuatrimestreId", "Meses", "numeroCuatrimestre", "yeard" },
+                values: new object[] { 100, "Abril - Agosto", 2, 2020 });
 
             migrationBuilder.InsertData(
                 table: "Cuatrimestre",
-                columns: new[] { "CuatrimestreId", "numeroCuatrimestre", "yeard" },
-                values: new object[] { 101, 1, 2019 });
+                columns: new[] { "CuatrimestreId", "Meses", "numeroCuatrimestre", "yeard" },
+                values: new object[] { 101, "Enero-abril", 1, 2019 });
 
             migrationBuilder.InsertData(
                 table: "Cuatrimestre",
-                columns: new[] { "CuatrimestreId", "numeroCuatrimestre", "yeard" },
-                values: new object[] { 102, 1, 2020 });
+                columns: new[] { "CuatrimestreId", "Meses", "numeroCuatrimestre", "yeard" },
+                values: new object[] { 102, "Enero - Abril", 1, 2020 });
 
             migrationBuilder.InsertData(
                 table: "Cuatrimestre",
-                columns: new[] { "CuatrimestreId", "numeroCuatrimestre", "yeard" },
-                values: new object[] { 103, 3, 2020 });
+                columns: new[] { "CuatrimestreId", "Meses", "numeroCuatrimestre", "yeard" },
+                values: new object[] { 103, "Octubre - Diciembre", 3, 2020 });
 
             migrationBuilder.InsertData(
                 table: "Estudiantes",
@@ -1508,6 +1525,36 @@ namespace ApiTutoria2022_2.Migrations
                 table: "Horarios",
                 columns: new[] { "HorariosId", "Aula", "Dia", "HoraFin", "HoraInicio", "SeccionId" },
                 values: new object[] { 209, "LAB. DE INFORMATICA A", "Wednesday", "14:00", "12:00", 209 });
+
+            migrationBuilder.InsertData(
+                table: "Indices",
+                columns: new[] { "IndiceId", "CuatrimestreId", "EstudianteId", "indiceAcumulado", "indicePeriodo" },
+                values: new object[] { 1, 100, 1, "3.2", "3.0" });
+
+            migrationBuilder.InsertData(
+                table: "Indices",
+                columns: new[] { "IndiceId", "CuatrimestreId", "EstudianteId", "indiceAcumulado", "indicePeriodo" },
+                values: new object[] { 2, 102, 1, "2.9", "3.0" });
+
+            migrationBuilder.InsertData(
+                table: "Indices",
+                columns: new[] { "IndiceId", "CuatrimestreId", "EstudianteId", "indiceAcumulado", "indicePeriodo" },
+                values: new object[] { 3, 103, 1, "3.1", "2.0" });
+
+            migrationBuilder.InsertData(
+                table: "Indices",
+                columns: new[] { "IndiceId", "CuatrimestreId", "EstudianteId", "indiceAcumulado", "indicePeriodo" },
+                values: new object[] { 4, 100, 2, "3.1", "2.0" });
+
+            migrationBuilder.InsertData(
+                table: "Indices",
+                columns: new[] { "IndiceId", "CuatrimestreId", "EstudianteId", "indiceAcumulado", "indicePeriodo" },
+                values: new object[] { 5, 102, 2, "3.1", "2.0" });
+
+            migrationBuilder.InsertData(
+                table: "Indices",
+                columns: new[] { "IndiceId", "CuatrimestreId", "EstudianteId", "indiceAcumulado", "indicePeriodo" },
+                values: new object[] { 6, 103, 2, "3.1", "2.0" });
 
             migrationBuilder.InsertData(
                 table: "InscripcionDetalles",
@@ -1617,17 +1664,17 @@ namespace ApiTutoria2022_2.Migrations
             migrationBuilder.InsertData(
                 table: "Personas",
                 columns: new[] { "PersonaId", "Apellidos", "Celular", "CorreoInstitucion", "CorreoPersonal", "DireccionId", "FechaNacimiento", "Nacionalidad", "Nombres", "NumeroCedula", "Sexo", "Telefono", "Tutor" },
-                values: new object[] { 1, "Salazar", "829-798-5996", "enmanuel@klk.com", "", 0, new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8543), "Republica Dominicana", "Enmanuel", "", 'N', "", "Ramon" });
+                values: new object[] { 1, "Salazar", "829-798-5996", "enmanuel@klk.com", "", 0, new DateTime(2022, 8, 13, 21, 58, 21, 772, DateTimeKind.Local).AddTicks(5900), "Republica Dominicana", "Enmanuel", "", 'N', "", "Ramon" });
 
             migrationBuilder.InsertData(
                 table: "Personas",
                 columns: new[] { "PersonaId", "Apellidos", "Celular", "CorreoInstitucion", "CorreoPersonal", "DireccionId", "FechaNacimiento", "Nacionalidad", "Nombres", "NumeroCedula", "Sexo", "Telefono", "Tutor" },
-                values: new object[] { 2, "Abreu", "829-780-5880", "jesus@klk.com", "", 0, new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8587), "Republica Dominicana", "Jesus", "", 'N', "", "Jose" });
+                values: new object[] { 2, "Abreu", "829-780-5880", "jesus@klk.com", "", 0, new DateTime(2022, 8, 13, 21, 58, 21, 772, DateTimeKind.Local).AddTicks(5916), "Republica Dominicana", "Jesus", "", 'N', "", "Jose" });
 
             migrationBuilder.InsertData(
                 table: "Personas",
                 columns: new[] { "PersonaId", "Apellidos", "Celular", "CorreoInstitucion", "CorreoPersonal", "DireccionId", "FechaNacimiento", "Nacionalidad", "Nombres", "NumeroCedula", "Sexo", "Telefono", "Tutor" },
-                values: new object[] { 3, "Peña Polonia", "829-798-5826", "Klk@klk.com", "", 0, new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8615), "Republica Dominicana", "Mario", "", 'N', "", "RAMÓN FRANCISCO PEÑA GARCÍA" });
+                values: new object[] { 3, "Peña Polonia", "829-798-5826", "Klk@klk.com", "", 0, new DateTime(2022, 8, 13, 21, 58, 21, 772, DateTimeKind.Local).AddTicks(5928), "Republica Dominicana", "Mario", "", 'N', "", "RAMÓN FRANCISCO PEÑA GARCÍA" });
 
             migrationBuilder.InsertData(
                 table: "Secciones",
@@ -1792,6 +1839,9 @@ namespace ApiTutoria2022_2.Migrations
 
             migrationBuilder.DropTable(
                 name: "Horarios");
+
+            migrationBuilder.DropTable(
+                name: "Indices");
 
             migrationBuilder.DropTable(
                 name: "InscripcionDetalles");

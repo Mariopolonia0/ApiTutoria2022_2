@@ -12,5 +12,7 @@ namespace ApiTutoria2022_2.Models
         public int CuatrimestreId { get; set; }
         public int yeard { get; set; }
         public int numeroCuatrimestre { get; set; }
+        public string Meses  { get; set; }
+
     }
 }

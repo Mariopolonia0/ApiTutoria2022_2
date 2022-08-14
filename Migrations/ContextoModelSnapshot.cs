@@ -1757,6 +1757,10 @@ namespace ApiTutoria2022_2.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Meses")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("numeroCuatrimestre")
                         .HasColumnType("INTEGER");
 
@@ -1771,24 +1775,28 @@ namespace ApiTutoria2022_2.Migrations
                         new
                         {
                             CuatrimestreId = 100,
+                            Meses = "Abril - Agosto",
                             numeroCuatrimestre = 2,
                             yeard = 2020
                         },
                         new
                         {
                             CuatrimestreId = 101,
+                            Meses = "Enero-abril",
                             numeroCuatrimestre = 1,
                             yeard = 2019
                         },
                         new
                         {
                             CuatrimestreId = 102,
+                            Meses = "Enero - Abril",
                             numeroCuatrimestre = 1,
                             yeard = 2020
                         },
                         new
                         {
                             CuatrimestreId = 103,
+                            Meses = "Octubre - Diciembre",
                             numeroCuatrimestre = 3,
                             yeard = 2020
                         });
@@ -1969,6 +1977,79 @@ namespace ApiTutoria2022_2.Migrations
                             HoraFin = "14:00",
                             HoraInicio = "12:00",
                             SeccionId = 209
+                        });
+                });
+
+            modelBuilder.Entity("ApiTutoria2022_2.Models.Indice", b =>
+                {
+                    b.Property<int>("IndiceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CuatrimestreId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EstudianteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("indiceAcumulado")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("indicePeriodo")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("IndiceId");
+
+                    b.ToTable("Indices");
+
+                    b.HasData(
+                        new
+                        {
+                            IndiceId = 1,
+                            CuatrimestreId = 100,
+                            EstudianteId = 1,
+                            indiceAcumulado = "3.2",
+                            indicePeriodo = "3.0"
+                        },
+                        new
+                        {
+                            IndiceId = 2,
+                            CuatrimestreId = 102,
+                            EstudianteId = 1,
+                            indiceAcumulado = "2.9",
+                            indicePeriodo = "3.0"
+                        },
+                        new
+                        {
+                            IndiceId = 3,
+                            CuatrimestreId = 103,
+                            EstudianteId = 1,
+                            indiceAcumulado = "3.1",
+                            indicePeriodo = "2.0"
+                        },
+                        new
+                        {
+                            IndiceId = 4,
+                            CuatrimestreId = 100,
+                            EstudianteId = 2,
+                            indiceAcumulado = "3.1",
+                            indicePeriodo = "2.0"
+                        },
+                        new
+                        {
+                            IndiceId = 5,
+                            CuatrimestreId = 102,
+                            EstudianteId = 2,
+                            indiceAcumulado = "3.1",
+                            indicePeriodo = "2.0"
+                        },
+                        new
+                        {
+                            IndiceId = 6,
+                            CuatrimestreId = 103,
+                            EstudianteId = 2,
+                            indiceAcumulado = "3.1",
+                            indicePeriodo = "2.0"
                         });
                 });
 
@@ -2255,7 +2336,7 @@ namespace ApiTutoria2022_2.Migrations
                             CorreoInstitucion = "enmanuel@klk.com",
                             CorreoPersonal = "",
                             DireccionId = 0,
-                            FechaNacimiento = new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8543),
+                            FechaNacimiento = new DateTime(2022, 8, 13, 21, 58, 21, 772, DateTimeKind.Local).AddTicks(5900),
                             Nacionalidad = "Republica Dominicana",
                             Nombres = "Enmanuel",
                             NumeroCedula = "",
@@ -2271,7 +2352,7 @@ namespace ApiTutoria2022_2.Migrations
                             CorreoInstitucion = "jesus@klk.com",
                             CorreoPersonal = "",
                             DireccionId = 0,
-                            FechaNacimiento = new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8587),
+                            FechaNacimiento = new DateTime(2022, 8, 13, 21, 58, 21, 772, DateTimeKind.Local).AddTicks(5916),
                             Nacionalidad = "Republica Dominicana",
                             Nombres = "Jesus",
                             NumeroCedula = "",
@@ -2287,7 +2368,7 @@ namespace ApiTutoria2022_2.Migrations
                             CorreoInstitucion = "Klk@klk.com",
                             CorreoPersonal = "",
                             DireccionId = 0,
-                            FechaNacimiento = new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8615),
+                            FechaNacimiento = new DateTime(2022, 8, 13, 21, 58, 21, 772, DateTimeKind.Local).AddTicks(5928),
                             Nacionalidad = "Republica Dominicana",
                             Nombres = "Mario",
                             NumeroCedula = "",

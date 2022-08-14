@@ -41,6 +41,7 @@ namespace ApiTutoria2022_2.Controllers
                     where (calificaciones.EstudianteId == estudianteId && cuatrimestre.yeard == yeard)
                     select new CuatrimestreDto
                     (
+                        cuatrimestre.CuatrimestreId,
                         cuatrimestre.numeroCuatrimestre.ToString(),
                         asignatura.Nombre,
                         calificaciones.Nota.ToString(),
