@@ -654,27 +654,127 @@ public class Contexto : DbContext
         });
 
         //AGREGAR LOGIN POR DEFAULT
-        modelBuilder.Entity<Login>().HasData(new Login { LoginId = 1, EstudianteId = 2, Usuario = "Jesus", Password = "1234" });
-        modelBuilder.Entity<Login>().HasData(new Login { LoginId = 2, EstudianteId = 3, Usuario = "2016", Password = "1234" });
-        modelBuilder.Entity<Login>().HasData(new Login { LoginId = 3, EstudianteId = 1, Usuario = "5", Password = "1234" });
+        modelBuilder.Entity<Login>().HasData(new Login
+        {
+            LoginId = 1,
+            EstudianteId = 2,
+            Usuario = "Jesus",
+            Password = "1234"
+        });
+        modelBuilder.Entity<Login>().HasData(new Login
+        {
+            LoginId = 2,
+            EstudianteId = 3,
+            Usuario = "2016",
+            Password = "1234"
+        });
+        modelBuilder.Entity<Login>().HasData(new Login
+        {
+            LoginId = 3,
+            EstudianteId = 1,
+            Usuario = "5",
+            Password = "1234"
+        });
 
         //AGREGAR PERSONA POR DEFAULT
-        modelBuilder.Entity<Persona>().HasData(new Persona { PersonaId = 1, Nombres = "Enmanuel", Apellidos = "Salazar", Nacionalidad = "Republica Dominicana", Tutor = "Ramon", CorreoInstitucion = "enmanuel@klk.com", Celular = "829-798-5996" });
-        modelBuilder.Entity<Persona>().HasData(new Persona { PersonaId = 2, Nombres = "Jesus", Apellidos = "Abreu", Nacionalidad = "Republica Dominicana", Tutor = "Jose", CorreoInstitucion = "jesus@klk.com", Celular = "829-780-5880" });
-        modelBuilder.Entity<Persona>().HasData(new Persona { PersonaId = 3, Nombres = "Mario", Apellidos = "Peña Polonia", Nacionalidad = "Republica Dominicana", Tutor = "RAMÓN FRANCISCO PEÑA GARCÍA", CorreoInstitucion = "Klk@klk.com", Celular = "829-798-5826" });
+        modelBuilder.Entity<Persona>().HasData(new Persona
+        {
+            PersonaId = 1,
+            Nombres = "Enmanuel",
+            Apellidos = "Salazar",
+            Nacionalidad = "Republica Dominicana",
+            Tutor = "Ramon",
+            CorreoInstitucion = "enmanuel@klk.com",
+            Celular = "829-798-5996"
+        });
+        modelBuilder.Entity<Persona>().HasData(new Persona
+        {
+            PersonaId = 2,
+            Nombres = "Jesus",
+            Apellidos = "Abreu",
+            Nacionalidad = "Republica Dominicana",
+            Tutor = "Jose",
+            CorreoInstitucion = "jesus@klk.com",
+            Celular = "829-780-5880"
+        });
+        modelBuilder.Entity<Persona>().HasData(new Persona
+        {
+            PersonaId = 3,
+            Nombres = "Mario",
+            Apellidos = "Peña Polonia",
+            Nacionalidad = "Republica Dominicana",
+            Tutor = "RAMÓN FRANCISCO PEÑA GARCÍA",
+            CorreoInstitucion = "Klk@klk.com",
+            Celular = "829-798-5826"
+        });
 
         //AGREGAR SECCION POR DEFAULT
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 200, DocenteId = 512, AsignaturaId = 20 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 201, DocenteId = 512, AsignaturaId = 21 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 209, DocenteId = 512, AsignaturaId = 22 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 202, DocenteId = 1, AsignaturaId = 23 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 203, DocenteId = 1, AsignaturaId = 29 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 204, DocenteId = 1, AsignaturaId = 24 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 205, DocenteId = 9, AsignaturaId = 25 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 206, DocenteId = 9, AsignaturaId = 26 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 207, DocenteId = 10, AsignaturaId = 27 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 208, DocenteId = 10, AsignaturaId = 28 });
-        modelBuilder.Entity<Seccion>().HasData(new Seccion { SeccionId = 210, DocenteId = 514, AsignaturaId = 22 });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 200,
+            DocenteId = 512,
+            AsignaturaId = 20
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 201,
+            DocenteId = 512,
+            AsignaturaId = 21
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 209,
+            DocenteId = 512,
+            AsignaturaId = 22
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 202,
+            DocenteId = 1,
+            AsignaturaId = 23
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 203,
+            DocenteId = 1,
+            AsignaturaId = 29
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 204,
+            DocenteId = 1,
+            AsignaturaId = 24
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 205,
+            DocenteId = 9,
+            AsignaturaId = 25
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 206,
+            DocenteId = 9,
+            AsignaturaId = 26
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 207,
+            DocenteId = 10,
+            AsignaturaId = 27
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 208,
+            DocenteId = 10,
+            AsignaturaId = 28
+        });
+        modelBuilder.Entity<Seccion>().HasData(new Seccion
+        {
+            SeccionId = 210,
+            DocenteId = 514,
+            AsignaturaId = 22
+        });
 
         //AGREGAR TRANSACCIONES POR DEFAULT
         modelBuilder.Entity<Transaccion>().HasData(new Transaccion
@@ -947,385 +1047,1260 @@ public class Contexto : DbContext
             EstudianteId = 1
         });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 20, AsignaturaId = 20, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 20,
+            AsignaturaId = 20,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 21, AsignaturaId = 21, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 21,
+            AsignaturaId = 21,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 22, AsignaturaId = 22, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 22,
+            AsignaturaId = 22,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 23, AsignaturaId = 23, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 23,
+            AsignaturaId = 23,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 24, AsignaturaId = 24, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 24,
+            AsignaturaId = 24,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 25, AsignaturaId = 25, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 25,
+            AsignaturaId = 25,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 26, AsignaturaId = 26, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 26,
+            AsignaturaId = 26,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 27, AsignaturaId = 27, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 27,
+            AsignaturaId = 27,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 28, AsignaturaId = 28, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 28,
+            AsignaturaId = 28,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 29, AsignaturaId = 29, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 29,
+            AsignaturaId = 29,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 30, AsignaturaId = 30, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 30,
+            AsignaturaId = 30,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 31, AsignaturaId = 31, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 31,
+            AsignaturaId = 31,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 32, AsignaturaId = 32, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 32,
+            AsignaturaId = 32,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 33, AsignaturaId = 33, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 33,
+            AsignaturaId = 33,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 34, AsignaturaId = 34, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 34,
+            AsignaturaId = 34,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 35, AsignaturaId = 35, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 35,
+            AsignaturaId = 35,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 36, AsignaturaId = 36, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 36,
+            AsignaturaId = 36,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 37, AsignaturaId = 37, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 37,
+            AsignaturaId = 37,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 38, AsignaturaId = 38, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 38,
+            AsignaturaId = 38,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 39, AsignaturaId = 39, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 39,
+            AsignaturaId = 39,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 40, AsignaturaId = 40, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 40,
+            AsignaturaId = 40,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 41, AsignaturaId = 41, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 41,
+            AsignaturaId = 41,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 42, AsignaturaId = 42, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 42,
+            AsignaturaId = 42,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 43, AsignaturaId = 43, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 43,
+            AsignaturaId = 43,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 44, AsignaturaId = 44, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 44,
+            AsignaturaId = 44,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 45, AsignaturaId = 45, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 45,
+            AsignaturaId = 45,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 46, AsignaturaId = 46, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 46,
+            AsignaturaId = 46,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 47, AsignaturaId = 47, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 47,
+            AsignaturaId = 47,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 48, AsignaturaId = 48, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 48,
+            AsignaturaId = 48,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 49, AsignaturaId = 49, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 49,
+            AsignaturaId = 49,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 50, AsignaturaId = 50, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 50,
+            AsignaturaId = 50,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 51, AsignaturaId = 51, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 51,
+            AsignaturaId = 51,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 52, AsignaturaId = 52, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 52,
+            AsignaturaId = 52,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 53, AsignaturaId = 53, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 53,
+            AsignaturaId = 53,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 54, AsignaturaId = 54, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 54,
+            AsignaturaId = 54,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 55, AsignaturaId = 55, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 55,
+            AsignaturaId = 55,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 56, AsignaturaId = 56, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 56,
+            AsignaturaId = 56,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 57, AsignaturaId = 57, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 57,
+            AsignaturaId = 57,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 58, AsignaturaId = 58, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 58,
+            AsignaturaId = 58,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 59, AsignaturaId = 59, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 59,
+            AsignaturaId = 59,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 60, AsignaturaId = 60, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 60,
+            AsignaturaId = 60,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 61, AsignaturaId = 61, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 61,
+            AsignaturaId = 61,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 62, AsignaturaId = 62, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 62,
+            AsignaturaId = 62,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 63, AsignaturaId = 63, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 63,
+            AsignaturaId = 63,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 64, AsignaturaId = 64, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 64,
+            AsignaturaId = 64,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 65, AsignaturaId = 65, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 65,
+            AsignaturaId = 65,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 66, AsignaturaId = 66, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 66,
+            AsignaturaId = 66,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 67, AsignaturaId = 67, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 67,
+            AsignaturaId = 67,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 68, AsignaturaId = 68, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 68,
+            AsignaturaId = 68,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 69, AsignaturaId = 69, Optativa = false, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 69,
+            AsignaturaId = 69,
+            Optativa = false,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 70, AsignaturaId = 70, Optativa = false, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 70,
+            AsignaturaId = 70,
+            Optativa = false,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 71, AsignaturaId = 71, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 71,
+            AsignaturaId = 71,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 72, AsignaturaId = 72, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 72,
+            AsignaturaId = 72,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 73, AsignaturaId = 73, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 73,
+            AsignaturaId = 73,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 74, AsignaturaId = 74, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 74,
+            AsignaturaId = 74,
+            EstudianteId = 1
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 75, AsignaturaId = 75, EstudianteId = 1 });
+        {
+            AsignaturaAprobadaId = 75,
+            AsignaturaId = 75,
+            EstudianteId = 1
+        });
 
 
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 200, AsignaturaId = 200, EstudianteId = 2 });
+        {
+            AsignaturaAprobadaId = 200,
+            AsignaturaId = 200,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 201,
+            AsignaturaId = 201,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 202,
+            AsignaturaId = 202,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 203,
+            AsignaturaId = 203,
+            EstudianteId = 2
+        });
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 201, AsignaturaId = 201, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 202, AsignaturaId = 202, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 203, AsignaturaId = 203, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 204, AsignaturaId = 204, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 205, AsignaturaId = 205, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 206, AsignaturaId = 206, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 207, AsignaturaId = 207, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 208, AsignaturaId = 208, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 209, AsignaturaId = 209, Optativa = false, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 210, AsignaturaId = 210, Optativa = false, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 211, AsignaturaId = 211, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 212, AsignaturaId = 212, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 213, AsignaturaId = 213, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 214, AsignaturaId = 214, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 215, AsignaturaId = 215, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 216, AsignaturaId = 216, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 217, AsignaturaId = 217, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 218, AsignaturaId = 218, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 219, AsignaturaId = 219, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 220, AsignaturaId = 220, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 221, AsignaturaId = 221, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 222, AsignaturaId = 222, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 223, AsignaturaId = 223, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 224, AsignaturaId = 224, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 225, AsignaturaId = 225, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 226, AsignaturaId = 226, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 227, AsignaturaId = 227, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 228, AsignaturaId = 228, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 229, AsignaturaId = 229, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 230, AsignaturaId = 230, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 231, AsignaturaId = 231, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 232, AsignaturaId = 232, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 233, AsignaturaId = 233, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 234, AsignaturaId = 234, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 235, AsignaturaId = 235, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 236, AsignaturaId = 236, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 237, AsignaturaId = 237, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 238, AsignaturaId = 238, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 239, AsignaturaId = 239, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 240, AsignaturaId = 240, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 241, AsignaturaId = 241, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 242, AsignaturaId = 242, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 243, AsignaturaId = 243, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 244, AsignaturaId = 244, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 245, AsignaturaId = 245, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 246, AsignaturaId = 246, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 247, AsignaturaId = 247, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 248, AsignaturaId = 248, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 249, AsignaturaId = 249, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 250, AsignaturaId = 250, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 251, AsignaturaId = 251, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 252, AsignaturaId = 252, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 253, AsignaturaId = 253, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 254, AsignaturaId = 254, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 255, AsignaturaId = 255, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 256, AsignaturaId = 256, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 257, AsignaturaId = 257, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 258, AsignaturaId = 258, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 259, AsignaturaId = 259, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 260, AsignaturaId = 260, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 261, AsignaturaId = 261, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 262, AsignaturaId = 262, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 263, AsignaturaId = 263, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 264, AsignaturaId = 264, EstudianteId = 2 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 265, AsignaturaId = 265, EstudianteId = 2 });
 
+        {
+            AsignaturaAprobadaId = 204,
+            AsignaturaId = 204,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 205,
+            AsignaturaId = 205,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 206,
+            AsignaturaId = 206,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 207,
+            AsignaturaId = 207,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 208,
+            AsignaturaId = 208,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 209,
+            AsignaturaId = 209,
+            Optativa = false,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 210,
+            AsignaturaId = 210,
+            Optativa = false,
+            EstudianteId = 2
+        });
 
         modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 300, AsignaturaId = 300, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 301, AsignaturaId = 301, Optativa = false, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 302, AsignaturaId = 302, Optativa = false, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 303, AsignaturaId = 303, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 304, AsignaturaId = 304, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 305, AsignaturaId = 305, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 306, AsignaturaId = 306, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 307, AsignaturaId = 307, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 308, AsignaturaId = 308, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 309, AsignaturaId = 309, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 310, AsignaturaId = 310, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 311, AsignaturaId = 311, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 312, AsignaturaId = 312, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 313, AsignaturaId = 313, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 314, AsignaturaId = 314, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 315, AsignaturaId = 315, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 316, AsignaturaId = 316, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 317, AsignaturaId = 317, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 318, AsignaturaId = 318, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 319, AsignaturaId = 319, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 320, AsignaturaId = 320, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 321, AsignaturaId = 321, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 322, AsignaturaId = 322, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 323, AsignaturaId = 323, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 324, AsignaturaId = 324, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 325, AsignaturaId = 325, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 326, AsignaturaId = 326, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 327, AsignaturaId = 327, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 328, AsignaturaId = 328, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 329, AsignaturaId = 329, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 330, AsignaturaId = 330, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 331, AsignaturaId = 331, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 332, AsignaturaId = 332, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 333, AsignaturaId = 333, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 334, AsignaturaId = 334, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 335, AsignaturaId = 335, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 336, AsignaturaId = 336, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 337, AsignaturaId = 337, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 338, AsignaturaId = 338, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 339, AsignaturaId = 339, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 340, AsignaturaId = 340, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 341, AsignaturaId = 341, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 342, AsignaturaId = 342, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 343, AsignaturaId = 343, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 344, AsignaturaId = 344, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 345, AsignaturaId = 345, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 346, AsignaturaId = 346, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 347, AsignaturaId = 347, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 348, AsignaturaId = 348, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 349, AsignaturaId = 349, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 350, AsignaturaId = 350, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 351, AsignaturaId = 351, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 352, AsignaturaId = 352, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 353, AsignaturaId = 353, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 354, AsignaturaId = 354, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 355, AsignaturaId = 355, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 356, AsignaturaId = 356, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 357, AsignaturaId = 357, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 358, AsignaturaId = 358, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 359, AsignaturaId = 359, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 360, AsignaturaId = 360, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 361, AsignaturaId = 361, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 362, AsignaturaId = 362, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 363, AsignaturaId = 363, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 364, AsignaturaId = 364, EstudianteId = 3 });
-        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
-        { AsignaturaAprobadaId = 365, AsignaturaId = 365, EstudianteId = 3 });
+        {
+            AsignaturaAprobadaId = 211,
+            AsignaturaId = 211,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 212,
+            AsignaturaId = 212,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 213,
+            AsignaturaId = 213,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 214,
+            AsignaturaId = 214,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 215,
+            AsignaturaId = 215,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 216,
+            AsignaturaId = 216,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 217,
+            AsignaturaId = 217,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 218,
+            AsignaturaId = 218,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 219,
+            AsignaturaId = 219,
+            EstudianteId = 2
+        });
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 220,
+            AsignaturaId = 220,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 221,
+            AsignaturaId = 221,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 222,
+            AsignaturaId = 222,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 223,
+            AsignaturaId = 223,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 224,
+            AsignaturaId = 224,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 225,
+            AsignaturaId = 225,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 226,
+            AsignaturaId = 226,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 227,
+            AsignaturaId = 227,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 228,
+            AsignaturaId = 228,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 229,
+            AsignaturaId = 229,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 230,
+            AsignaturaId = 230,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 231,
+            AsignaturaId = 231,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 232,
+            AsignaturaId = 232,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 233,
+            AsignaturaId = 233,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 234,
+            AsignaturaId = 234,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 235,
+            AsignaturaId = 235,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 236,
+            AsignaturaId = 236,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 237,
+            AsignaturaId = 237,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 238,
+            AsignaturaId = 238,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 239,
+            AsignaturaId = 239,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 240,
+            AsignaturaId = 240,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 241,
+            AsignaturaId = 241,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 242,
+            AsignaturaId = 242,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 243,
+            AsignaturaId = 243,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 244,
+            AsignaturaId = 244,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 245,
+            AsignaturaId = 245,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 246,
+            AsignaturaId = 246,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 247,
+            AsignaturaId = 247,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 248,
+            AsignaturaId = 248,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 249,
+            AsignaturaId = 249,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 250,
+            AsignaturaId = 250,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 251,
+            AsignaturaId = 251,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 252,
+            AsignaturaId = 252,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 253,
+            AsignaturaId = 253,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 254,
+            AsignaturaId = 254,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 255,
+            AsignaturaId = 255,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 256,
+            AsignaturaId = 256,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 257,
+            AsignaturaId = 257,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 258,
+            AsignaturaId = 258,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 259,
+            AsignaturaId = 259,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 260,
+            AsignaturaId = 260,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 261,
+            AsignaturaId = 261,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 262,
+            AsignaturaId = 262,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 263,
+            AsignaturaId = 263,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 264,
+            AsignaturaId = 264,
+            EstudianteId = 2
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 265,
+            AsignaturaId = 265,
+            EstudianteId = 2
+        });
+
+
+
+
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 300,
+            AsignaturaId = 300,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 301,
+            AsignaturaId = 301,
+            Optativa = false,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 302,
+            AsignaturaId = 302,
+            Optativa = false,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 303,
+            AsignaturaId = 303,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 304,
+            AsignaturaId = 304,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 305,
+            AsignaturaId = 305,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 306,
+            AsignaturaId = 306,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 307,
+            AsignaturaId = 307,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 308,
+            AsignaturaId = 308,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 309,
+            AsignaturaId = 309,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 310,
+            AsignaturaId = 310,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 311,
+            AsignaturaId = 311,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 312,
+            AsignaturaId = 312,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 313,
+            AsignaturaId = 313,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 314,
+            AsignaturaId = 314,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 315,
+            AsignaturaId = 315,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 316,
+            AsignaturaId = 316,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 317,
+            AsignaturaId = 317,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 318,
+            AsignaturaId = 318,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 319,
+            AsignaturaId = 319,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 320,
+            AsignaturaId = 320,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 321,
+            AsignaturaId = 321,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 322,
+            AsignaturaId = 322,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 323,
+            AsignaturaId = 323,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 324,
+            AsignaturaId = 324,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 325,
+            AsignaturaId = 325,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 326,
+            AsignaturaId = 326,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 327,
+            AsignaturaId = 327,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 328,
+            AsignaturaId = 328,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 329,
+            AsignaturaId = 329,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 330,
+            AsignaturaId = 330,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 331,
+            AsignaturaId = 331,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 332,
+            AsignaturaId = 332,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 333,
+            AsignaturaId = 333,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 334,
+            AsignaturaId = 334,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 335,
+            AsignaturaId = 335,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 336,
+            AsignaturaId = 336,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 337,
+            AsignaturaId = 337,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 338,
+            AsignaturaId = 338,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 339,
+            AsignaturaId = 339,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 340,
+            AsignaturaId = 340,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 341,
+            AsignaturaId = 341,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 342,
+            AsignaturaId = 342,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 343,
+            AsignaturaId = 343,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 344,
+            AsignaturaId = 344,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 345,
+            AsignaturaId = 345,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 346,
+            AsignaturaId = 346,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 347,
+            AsignaturaId = 347,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 348,
+            AsignaturaId = 348,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 349,
+            AsignaturaId = 349,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 350,
+            AsignaturaId = 350,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 351,
+            AsignaturaId = 351,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 352,
+            AsignaturaId = 352,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 353,
+            AsignaturaId = 353,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 354,
+            AsignaturaId = 354,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 355,
+            AsignaturaId = 355,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 356,
+            AsignaturaId = 356,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 357,
+            AsignaturaId = 357,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 358,
+            AsignaturaId = 358,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 359,
+            AsignaturaId = 359,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 360,
+            AsignaturaId = 360,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 361,
+            AsignaturaId = 361,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 362,
+            AsignaturaId = 362,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 363,
+            AsignaturaId = 363,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 364,
+            AsignaturaId = 364,
+            EstudianteId = 3
+        });
+
+        modelBuilder.Entity<AsignaturaAprobada>().HasData(new AsignaturaAprobada
+        {
+            AsignaturaAprobadaId = 365,
+            AsignaturaId = 365,
+            EstudianteId = 3
+        });
     }
 }
 
