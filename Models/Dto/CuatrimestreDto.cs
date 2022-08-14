@@ -7,19 +7,16 @@ namespace ApiTutoria2022_2.Models.Dto
 {
     public class CuatrimestreDto
     {
-        public int año { get; set; }
-        public int numerocuatrimestre { get; set; }
-        public int nota { get; set; }
-        public string asignaturacuatrimestre { get; set; }
-        public string calificaciones { get; set; }
-
-        public CuatrimestreDto(int año, int numerocuatrimestre, int nota, string asignaturacuatrimestre, string calificaciones)
+        public string NumeroCuatrimestre { get; set; }
+        public string? NombreMateria { get; set; }
+        public string? Nota {get; set;}
+        public string? Calificacion {get; set;}
+        public CuatrimestreDto(string numeroCuatrimestre, string? nombreMateria, string? nota, string? calificacion)
         {
-            this.año = año;
-            this.numerocuatrimestre = numerocuatrimestre;
-            this.nota = nota;
-            this.asignaturacuatrimestre = asignaturacuatrimestre;
-            this.calificaciones = calificaciones;
+            NumeroCuatrimestre = numeroCuatrimestre;
+            NombreMateria = nombreMateria;
+            Nota = nota;
+            Calificacion = calificacion;
         }
     }
 }

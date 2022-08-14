@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nurias\\OneDrive\\Escritorio\\API\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj": {}
+    "C:\\Users\\Mario\\source\\repos\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nurias\\OneDrive\\Escritorio\\API\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj": {
+    "C:\\Users\\Mario\\source\\repos\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nurias\\OneDrive\\Escritorio\\API\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj",
+        "projectUniqueName": "C:\\Users\\Mario\\source\\repos\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj",
         "projectName": "ApiTutoria2022_2",
-        "projectPath": "C:\\Users\\Nurias\\OneDrive\\Escritorio\\API\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj",
-        "packagesPath": "C:\\Users\\Nurias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nurias\\OneDrive\\Escritorio\\API\\ApiTutoria2022_2\\obj\\",
+        "projectPath": "C:\\Users\\Mario\\source\\repos\\ApiTutoria2022_2\\ApiTutoria2022_2.csproj",
+        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mario\\source\\repos\\ApiTutoria2022_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nurias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SQLite": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }

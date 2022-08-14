@@ -8,7 +8,6 @@ namespace ApiTutoria2022_2.Models.Dto
         public string horaInicio { get; set; } = string.Empty;
         public string horaFinal { get; set; } = string.Empty;
 
-
         public MateriasDto(string nombreMateria, string dia, string aula, string horaInicio, string horaFinal)
         {
             this.nombreMateria = nombreMateria;

@@ -1487,6 +1487,232 @@ namespace ApiTutoria2022_2.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ApiTutoria2022_2.Models.Calificaciones", b =>
+                {
+                    b.Property<int>("CalificacionesId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AsignaturaId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Calificacion")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("CuatrimestreId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EstudianteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Nota")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("CalificacionesId");
+
+                    b.ToTable("Calificaciones");
+
+                    b.HasData(
+                        new
+                        {
+                            CalificacionesId = 1,
+                            AsignaturaId = 20,
+                            Calificacion = "A",
+                            CuatrimestreId = 100,
+                            EstudianteId = 1,
+                            Nota = 90
+                        },
+                        new
+                        {
+                            CalificacionesId = 2,
+                            AsignaturaId = 21,
+                            Calificacion = "B",
+                            CuatrimestreId = 100,
+                            EstudianteId = 1,
+                            Nota = 80
+                        },
+                        new
+                        {
+                            CalificacionesId = 3,
+                            AsignaturaId = 22,
+                            Calificacion = "B+",
+                            CuatrimestreId = 100,
+                            EstudianteId = 1,
+                            Nota = 85
+                        },
+                        new
+                        {
+                            CalificacionesId = 4,
+                            AsignaturaId = 23,
+                            Calificacion = "C",
+                            CuatrimestreId = 103,
+                            EstudianteId = 1,
+                            Nota = 70
+                        },
+                        new
+                        {
+                            CalificacionesId = 5,
+                            AsignaturaId = 24,
+                            Calificacion = "A",
+                            CuatrimestreId = 102,
+                            EstudianteId = 1,
+                            Nota = 90
+                        },
+                        new
+                        {
+                            CalificacionesId = 6,
+                            AsignaturaId = 25,
+                            Calificacion = "A",
+                            CuatrimestreId = 102,
+                            EstudianteId = 1,
+                            Nota = 90
+                        },
+                        new
+                        {
+                            CalificacionesId = 7,
+                            AsignaturaId = 26,
+                            Calificacion = "D",
+                            CuatrimestreId = 102,
+                            EstudianteId = 1,
+                            Nota = 60
+                        },
+                        new
+                        {
+                            CalificacionesId = 8,
+                            AsignaturaId = 27,
+                            Calificacion = "A",
+                            CuatrimestreId = 103,
+                            EstudianteId = 1,
+                            Nota = 90
+                        },
+                        new
+                        {
+                            CalificacionesId = 9,
+                            AsignaturaId = 28,
+                            Calificacion = "A+",
+                            CuatrimestreId = 103,
+                            EstudianteId = 1,
+                            Nota = 95
+                        },
+                        new
+                        {
+                            CalificacionesId = 10,
+                            AsignaturaId = 20,
+                            Calificacion = "B",
+                            CuatrimestreId = 102,
+                            EstudianteId = 2,
+                            Nota = 80
+                        },
+                        new
+                        {
+                            CalificacionesId = 12,
+                            AsignaturaId = 21,
+                            Calificacion = "B+",
+                            CuatrimestreId = 100,
+                            EstudianteId = 2,
+                            Nota = 85
+                        },
+                        new
+                        {
+                            CalificacionesId = 13,
+                            AsignaturaId = 22,
+                            Calificacion = "B",
+                            CuatrimestreId = 103,
+                            EstudianteId = 2,
+                            Nota = 80
+                        },
+                        new
+                        {
+                            CalificacionesId = 14,
+                            AsignaturaId = 23,
+                            Calificacion = "C+",
+                            CuatrimestreId = 102,
+                            EstudianteId = 2,
+                            Nota = 75
+                        },
+                        new
+                        {
+                            CalificacionesId = 15,
+                            AsignaturaId = 24,
+                            Calificacion = "A+",
+                            CuatrimestreId = 102,
+                            EstudianteId = 2,
+                            Nota = 95
+                        },
+                        new
+                        {
+                            CalificacionesId = 16,
+                            AsignaturaId = 25,
+                            Calificacion = "A+",
+                            CuatrimestreId = 100,
+                            EstudianteId = 2,
+                            Nota = 95
+                        },
+                        new
+                        {
+                            CalificacionesId = 17,
+                            AsignaturaId = 26,
+                            Calificacion = "D",
+                            CuatrimestreId = 100,
+                            EstudianteId = 2,
+                            Nota = 60
+                        },
+                        new
+                        {
+                            CalificacionesId = 18,
+                            AsignaturaId = 27,
+                            Calificacion = "A",
+                            CuatrimestreId = 103,
+                            EstudianteId = 2,
+                            Nota = 90
+                        },
+                        new
+                        {
+                            CalificacionesId = 19,
+                            AsignaturaId = 28,
+                            Calificacion = "A",
+                            CuatrimestreId = 103,
+                            EstudianteId = 2,
+                            Nota = 90
+                        },
+                        new
+                        {
+                            CalificacionesId = 20,
+                            AsignaturaId = 25,
+                            Calificacion = "B",
+                            CuatrimestreId = 102,
+                            EstudianteId = 3,
+                            Nota = 80
+                        },
+                        new
+                        {
+                            CalificacionesId = 21,
+                            AsignaturaId = 26,
+                            Calificacion = "D",
+                            CuatrimestreId = 100,
+                            EstudianteId = 3,
+                            Nota = 60
+                        },
+                        new
+                        {
+                            CalificacionesId = 22,
+                            AsignaturaId = 27,
+                            Calificacion = "B",
+                            CuatrimestreId = 101,
+                            EstudianteId = 3,
+                            Nota = 80
+                        },
+                        new
+                        {
+                            CalificacionesId = 23,
+                            AsignaturaId = 28,
+                            Calificacion = "A",
+                            CuatrimestreId = 101,
+                            EstudianteId = 3,
+                            Nota = 90
+                        });
+                });
+
             modelBuilder.Entity("ApiTutoria2022_2.Models.Carrera", b =>
                 {
                     b.Property<int>("CarreraId")
@@ -1522,6 +1748,49 @@ namespace ApiTutoria2022_2.Migrations
                             Nombre = "Ingeniero en Sistemas y Computación",
                             cantidadMateriaObligatorias = 75,
                             cantidadMateriaOptativas = 4
+                        });
+                });
+
+            modelBuilder.Entity("ApiTutoria2022_2.Models.Cuatrimestre", b =>
+                {
+                    b.Property<int>("CuatrimestreId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("numeroCuatrimestre")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("yeard")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("CuatrimestreId");
+
+                    b.ToTable("Cuatrimestre");
+
+                    b.HasData(
+                        new
+                        {
+                            CuatrimestreId = 100,
+                            numeroCuatrimestre = 2,
+                            yeard = 2020
+                        },
+                        new
+                        {
+                            CuatrimestreId = 101,
+                            numeroCuatrimestre = 1,
+                            yeard = 2019
+                        },
+                        new
+                        {
+                            CuatrimestreId = 102,
+                            numeroCuatrimestre = 1,
+                            yeard = 2020
+                        },
+                        new
+                        {
+                            CuatrimestreId = 103,
+                            numeroCuatrimestre = 3,
+                            yeard = 2020
                         });
                 });
 
@@ -1709,6 +1978,9 @@ namespace ApiTutoria2022_2.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("CuatrimestreId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("EstudianteId")
                         .HasColumnType("INTEGER");
 
@@ -1732,6 +2004,7 @@ namespace ApiTutoria2022_2.Migrations
                         new
                         {
                             InscripcionId = 104,
+                            CuatrimestreId = 100,
                             EstudianteId = 1,
                             FechaFinalTrimestre = new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FechaInicioTrimestre = new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1741,6 +2014,7 @@ namespace ApiTutoria2022_2.Migrations
                         new
                         {
                             InscripcionId = 105,
+                            CuatrimestreId = 100,
                             EstudianteId = 2,
                             FechaFinalTrimestre = new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FechaInicioTrimestre = new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -1750,11 +2024,22 @@ namespace ApiTutoria2022_2.Migrations
                         new
                         {
                             InscripcionId = 106,
+                            CuatrimestreId = 100,
                             EstudianteId = 3,
                             FechaFinalTrimestre = new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FechaInicioTrimestre = new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FechaRegistrada = new DateTime(2022, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UltimaInscripcion = true
+                        },
+                        new
+                        {
+                            InscripcionId = 107,
+                            CuatrimestreId = 101,
+                            EstudianteId = 3,
+                            FechaFinalTrimestre = new DateTime(2020, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaInicioTrimestre = new DateTime(2020, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FechaRegistrada = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UltimaInscripcion = false
                         });
                 });
 
@@ -1970,7 +2255,7 @@ namespace ApiTutoria2022_2.Migrations
                             CorreoInstitucion = "enmanuel@klk.com",
                             CorreoPersonal = "",
                             DireccionId = 0,
-                            FechaNacimiento = new DateTime(2022, 8, 3, 11, 35, 20, 469, DateTimeKind.Local).AddTicks(3311),
+                            FechaNacimiento = new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8543),
                             Nacionalidad = "Republica Dominicana",
                             Nombres = "Enmanuel",
                             NumeroCedula = "",
@@ -1986,7 +2271,7 @@ namespace ApiTutoria2022_2.Migrations
                             CorreoInstitucion = "jesus@klk.com",
                             CorreoPersonal = "",
                             DireccionId = 0,
-                            FechaNacimiento = new DateTime(2022, 8, 3, 11, 35, 20, 469, DateTimeKind.Local).AddTicks(3333),
+                            FechaNacimiento = new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8587),
                             Nacionalidad = "Republica Dominicana",
                             Nombres = "Jesus",
                             NumeroCedula = "",
@@ -2002,7 +2287,7 @@ namespace ApiTutoria2022_2.Migrations
                             CorreoInstitucion = "Klk@klk.com",
                             CorreoPersonal = "",
                             DireccionId = 0,
-                            FechaNacimiento = new DateTime(2022, 8, 3, 11, 35, 20, 469, DateTimeKind.Local).AddTicks(3347),
+                            FechaNacimiento = new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8615),
                             Nacionalidad = "Republica Dominicana",
                             Nombres = "Mario",
                             NumeroCedula = "",

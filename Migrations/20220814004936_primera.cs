@@ -41,6 +41,23 @@ namespace ApiTutoria2022_2.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Calificaciones",
+                columns: table => new
+                {
+                    CalificacionesId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CuatrimestreId = table.Column<int>(type: "INTEGER", nullable: false),
+                    EstudianteId = table.Column<int>(type: "INTEGER", nullable: false),
+                    AsignaturaId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Nota = table.Column<int>(type: "INTEGER", nullable: false),
+                    Calificacion = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Calificaciones", x => x.CalificacionesId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Carreras",
                 columns: table => new
                 {
@@ -55,6 +72,20 @@ namespace ApiTutoria2022_2.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Carreras", x => x.CarreraId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Cuatrimestre",
+                columns: table => new
+                {
+                    CuatrimestreId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    yeard = table.Column<int>(type: "INTEGER", nullable: false),
+                    numeroCuatrimestre = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cuatrimestre", x => x.CuatrimestreId);
                 });
 
             migrationBuilder.CreateTable(
@@ -112,6 +143,7 @@ namespace ApiTutoria2022_2.Migrations
                     InscripcionId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     EstudianteId = table.Column<int>(type: "INTEGER", nullable: false),
+                    CuatrimestreId = table.Column<int>(type: "INTEGER", nullable: false),
                     FechaRegistrada = table.Column<DateTime>(type: "TEXT", nullable: false),
                     FechaInicioTrimestre = table.Column<DateTime>(type: "TEXT", nullable: false),
                     FechaFinalTrimestre = table.Column<DateTime>(type: "TEXT", nullable: false),
@@ -1278,9 +1310,139 @@ namespace ApiTutoria2022_2.Migrations
                 values: new object[] { 29, 12, "ISC-701", 4, "SISTEMAS OPERATIVOS I" });
 
             migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 1, 20, "A", 100, 1, 90 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 2, 21, "B", 100, 1, 80 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 3, 22, "B+", 100, 1, 85 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 4, 23, "C", 103, 1, 70 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 5, 24, "A", 102, 1, 90 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 6, 25, "A", 102, 1, 90 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 7, 26, "D", 102, 1, 60 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 8, 27, "A", 103, 1, 90 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 9, 28, "A+", 103, 1, 95 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 10, 20, "B", 102, 2, 80 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 12, 21, "B+", 100, 2, 85 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 13, 22, "B", 103, 2, 80 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 14, 23, "C+", 102, 2, 75 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 15, 24, "A+", 102, 2, 95 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 16, 25, "A+", 100, 2, 95 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 17, 26, "D", 100, 2, 60 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 18, 27, "A", 103, 2, 90 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 19, 28, "A", 103, 2, 90 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 20, 25, "B", 102, 3, 80 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 21, 26, "D", 100, 3, 60 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 22, 27, "B", 101, 3, 80 });
+
+            migrationBuilder.InsertData(
+                table: "Calificaciones",
+                columns: new[] { "CalificacionesId", "AsignaturaId", "Calificacion", "CuatrimestreId", "EstudianteId", "Nota" },
+                values: new object[] { 23, 28, "A", 101, 3, 90 });
+
+            migrationBuilder.InsertData(
                 table: "Carreras",
                 columns: new[] { "CarreraId", "DirectorId", "FacultadId", "Nombre", "cantidadMateriaObligatorias", "cantidadMateriaOptativas" },
                 values: new object[] { 12, 103, 12, "Ingeniero en Sistemas y Computación", 75, 4 });
+
+            migrationBuilder.InsertData(
+                table: "Cuatrimestre",
+                columns: new[] { "CuatrimestreId", "numeroCuatrimestre", "yeard" },
+                values: new object[] { 100, 2, 2020 });
+
+            migrationBuilder.InsertData(
+                table: "Cuatrimestre",
+                columns: new[] { "CuatrimestreId", "numeroCuatrimestre", "yeard" },
+                values: new object[] { 101, 1, 2019 });
+
+            migrationBuilder.InsertData(
+                table: "Cuatrimestre",
+                columns: new[] { "CuatrimestreId", "numeroCuatrimestre", "yeard" },
+                values: new object[] { 102, 1, 2020 });
+
+            migrationBuilder.InsertData(
+                table: "Cuatrimestre",
+                columns: new[] { "CuatrimestreId", "numeroCuatrimestre", "yeard" },
+                values: new object[] { 103, 3, 2020 });
 
             migrationBuilder.InsertData(
                 table: "Estudiantes",
@@ -1419,18 +1581,23 @@ namespace ApiTutoria2022_2.Migrations
 
             migrationBuilder.InsertData(
                 table: "Inscripciones",
-                columns: new[] { "InscripcionId", "EstudianteId", "FechaFinalTrimestre", "FechaInicioTrimestre", "FechaRegistrada", "UltimaInscripcion" },
-                values: new object[] { 104, 1, new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), true });
+                columns: new[] { "InscripcionId", "CuatrimestreId", "EstudianteId", "FechaFinalTrimestre", "FechaInicioTrimestre", "FechaRegistrada", "UltimaInscripcion" },
+                values: new object[] { 104, 100, 1, new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), true });
 
             migrationBuilder.InsertData(
                 table: "Inscripciones",
-                columns: new[] { "InscripcionId", "EstudianteId", "FechaFinalTrimestre", "FechaInicioTrimestre", "FechaRegistrada", "UltimaInscripcion" },
-                values: new object[] { 105, 2, new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), true });
+                columns: new[] { "InscripcionId", "CuatrimestreId", "EstudianteId", "FechaFinalTrimestre", "FechaInicioTrimestre", "FechaRegistrada", "UltimaInscripcion" },
+                values: new object[] { 105, 100, 2, new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), true });
 
             migrationBuilder.InsertData(
                 table: "Inscripciones",
-                columns: new[] { "InscripcionId", "EstudianteId", "FechaFinalTrimestre", "FechaInicioTrimestre", "FechaRegistrada", "UltimaInscripcion" },
-                values: new object[] { 106, 3, new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), true });
+                columns: new[] { "InscripcionId", "CuatrimestreId", "EstudianteId", "FechaFinalTrimestre", "FechaInicioTrimestre", "FechaRegistrada", "UltimaInscripcion" },
+                values: new object[] { 106, 100, 3, new DateTime(2022, 8, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), true });
+
+            migrationBuilder.InsertData(
+                table: "Inscripciones",
+                columns: new[] { "InscripcionId", "CuatrimestreId", "EstudianteId", "FechaFinalTrimestre", "FechaInicioTrimestre", "FechaRegistrada", "UltimaInscripcion" },
+                values: new object[] { 107, 101, 3, new DateTime(2020, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), false });
 
             migrationBuilder.InsertData(
                 table: "Logins",
@@ -1450,17 +1617,17 @@ namespace ApiTutoria2022_2.Migrations
             migrationBuilder.InsertData(
                 table: "Personas",
                 columns: new[] { "PersonaId", "Apellidos", "Celular", "CorreoInstitucion", "CorreoPersonal", "DireccionId", "FechaNacimiento", "Nacionalidad", "Nombres", "NumeroCedula", "Sexo", "Telefono", "Tutor" },
-                values: new object[] { 1, "Salazar", "829-798-5996", "enmanuel@klk.com", "", 0, new DateTime(2022, 8, 3, 11, 35, 20, 469, DateTimeKind.Local).AddTicks(3311), "Republica Dominicana", "Enmanuel", "", 'N', "", "Ramon" });
+                values: new object[] { 1, "Salazar", "829-798-5996", "enmanuel@klk.com", "", 0, new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8543), "Republica Dominicana", "Enmanuel", "", 'N', "", "Ramon" });
 
             migrationBuilder.InsertData(
                 table: "Personas",
                 columns: new[] { "PersonaId", "Apellidos", "Celular", "CorreoInstitucion", "CorreoPersonal", "DireccionId", "FechaNacimiento", "Nacionalidad", "Nombres", "NumeroCedula", "Sexo", "Telefono", "Tutor" },
-                values: new object[] { 2, "Abreu", "829-780-5880", "jesus@klk.com", "", 0, new DateTime(2022, 8, 3, 11, 35, 20, 469, DateTimeKind.Local).AddTicks(3333), "Republica Dominicana", "Jesus", "", 'N', "", "Jose" });
+                values: new object[] { 2, "Abreu", "829-780-5880", "jesus@klk.com", "", 0, new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8587), "Republica Dominicana", "Jesus", "", 'N', "", "Jose" });
 
             migrationBuilder.InsertData(
                 table: "Personas",
                 columns: new[] { "PersonaId", "Apellidos", "Celular", "CorreoInstitucion", "CorreoPersonal", "DireccionId", "FechaNacimiento", "Nacionalidad", "Nombres", "NumeroCedula", "Sexo", "Telefono", "Tutor" },
-                values: new object[] { 3, "Peña Polonia", "829-798-5826", "Klk@klk.com", "", 0, new DateTime(2022, 8, 3, 11, 35, 20, 469, DateTimeKind.Local).AddTicks(3347), "Republica Dominicana", "Mario", "", 'N', "", "RAMÓN FRANCISCO PEÑA GARCÍA" });
+                values: new object[] { 3, "Peña Polonia", "829-798-5826", "Klk@klk.com", "", 0, new DateTime(2022, 8, 13, 20, 49, 35, 400, DateTimeKind.Local).AddTicks(8615), "Republica Dominicana", "Mario", "", 'N', "", "RAMÓN FRANCISCO PEÑA GARCÍA" });
 
             migrationBuilder.InsertData(
                 table: "Secciones",
@@ -1612,7 +1779,13 @@ namespace ApiTutoria2022_2.Migrations
                 name: "Asignaturas");
 
             migrationBuilder.DropTable(
+                name: "Calificaciones");
+
+            migrationBuilder.DropTable(
                 name: "Carreras");
+
+            migrationBuilder.DropTable(
+                name: "Cuatrimestre");
 
             migrationBuilder.DropTable(
                 name: "Estudiantes");
